@@ -6,6 +6,20 @@
       "year": "2006",
       "price": "8999",
       "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
-    }
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "year": "2009",
+      "price": "6999",
+      "description": "Beautiful silver 2009 Honda Civic coupe with 105000 miles on it. Very economical with 34 mpg."
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "year": "2012",
+      "price": "10499",
+      "description": "Excellent daily driver, this 2012 Toyota Camry has 72000 miles on it and will last you for years."
+    }   
   ]
 }
