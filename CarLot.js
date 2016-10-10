@@ -18,16 +18,28 @@ var CarLot = function() {
 		},
 		getInventory: function(carsAvailable) {
 			var list = document.getElementById("carList");
+			var rowCounter = 0;
 			var outputString = "";
 
 			for (var i = 0; i < carsAvailable.length; i++) {
 				var currentCar = carsAvailable[i];
 
-				outputString += `<div class="car">
+				if (i % 3 === 0) {
+					outputString += `<div class="row">`;
+				}
+
+				outputString +=
+				`<div class="col-md-4">
+				<div class="car">
 				<h3>${currentCar.year + " " + currentCar.make + " " + currentCar.model}</h3>
 				<p>${currentCar.description}</p>
 				<h2>$${currentCar.price}</h2>
+				</div>
 				</div>`;
+
+				if (i % 3 === 2 || i === carsAvailable.length - 1) {
+					outputString += `</div><!-- / row -->`;
+				}
 			}
 
 			list.innerHTML = outputString;
@@ -35,3 +47,5 @@ var CarLot = function() {
 	}
 
 }(CarLot || {});
+
+CarLot.loadInventory(CarLot.getInventory);

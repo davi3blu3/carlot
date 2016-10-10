@@ -22,6 +22,13 @@
       "description": "Excellent daily driver, this green 2012 Toyota Camry has 72000 miles on it and will last you for years."
     },
     {
+      "make": "Ford",
+      "model": "Fusion",
+      "year": "2014",
+      "price": "15999",
+      "description": "Like new, in very good condition! An unbelievable 14000 miles and very popular sedan. This car will not stay on the lot long."
+    },
+    {
       "make": "Nissan",
       "model": "Sentra",
       "year": "2007",
