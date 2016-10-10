@@ -5,18 +5,18 @@ var CarLot = function() {
 
 	// return public methods
 	return {
-		loadInventory: function(callback) {
+		loadInventory: function(callback, callback2) {
 			var loader = new XMLHttpRequest();
 
 			loader.addEventListener("load", function() {
 				inventory = JSON.parse(this.responseText).cars;
-				callback(inventory);
+				callback(inventory, callback2);
 			});
 
 			loader.open("GET", "inventory.json");
 			loader.send();
 		},
-		getInventory: function(carsAvailable) {
+		getInventory: function(carsAvailable, callback2) {
 			var list = document.getElementById("carList");
 			var rowCounter = 0;
 			var outputString = "";
@@ -43,9 +43,8 @@ var CarLot = function() {
 			}
 
 			list.innerHTML = outputString;
+			callback2();
 		}
 	}
 
 }(CarLot || {});
-
-CarLot.loadInventory(CarLot.getInventory);
