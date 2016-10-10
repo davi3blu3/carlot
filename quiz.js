@@ -1,5 +1,3 @@
-document.write("Cause I'm ready for the next challenge");
-
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
 
