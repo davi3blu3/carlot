@@ -19,7 +19,28 @@
       "model": "Camry",
       "year": "2012",
       "price": "10499",
-      "description": "Excellent daily driver, this 2012 Toyota Camry has 72000 miles on it and will last you for years."
-    }   
+      "description": "Excellent daily driver, this green 2012 Toyota Camry has 72000 miles on it and will last you for years."
+    },
+    {
+      "make": "Nissan",
+      "model": "Sentra",
+      "year": "2007",
+      "price": "9499",
+      "description": "This is an immaculate red 2007 Nissan Sentra with only 34000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "year": "2010",
+      "price": "8999",
+      "description": "Beautiful blue 2010 Honda Civic coupe with 95000 miles on it. Very economical with 34 mpg."
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": "2012",
+      "price": "11999",
+      "description": "A perennial favorite, this 2012 Toyota Corolla has 69000 miles on it and will last you for years."
+    }      
   ]
 }

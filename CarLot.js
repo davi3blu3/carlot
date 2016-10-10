@@ -5,25 +5,29 @@ var CarLot = function() {
 
 	// return public methods
 	return {
-		loadInventory: function() {
+		loadInventory: function(callback) {
 			var loader = new XMLHttpRequest();
 
 			loader.addEventListener("load", function() {
 				inventory = JSON.parse(this.responseText).cars;
-				CarLot.getInventory();
+				callback(inventory);
 			});
 
 			loader.open("GET", "inventory.json");
 			loader.send();
 		},
-		getInventory: function() {
+		getInventory: function(carsAvailable) {
 			var list = document.getElementById("carList");
 			var outputString = "";
 
-			for (var i = 0; i < inventory.length; i++) {
-				var currentCar = inventory[i];
+			for (var i = 0; i < carsAvailable.length; i++) {
+				var currentCar = carsAvailable[i];
 
-				outputString += `<div class="car"><h3>${currentCar.year + " " + currentCar.make + " " + currentCar.model}</h3><p>${currentCar.description}</p><h2>$${currentCar.price}</h2></div>`;
+				outputString += `<div class="car">
+				<h3>${currentCar.year + " " + currentCar.make + " " + currentCar.model}</h3>
+				<p>${currentCar.description}</p>
+				<h2>$${currentCar.price}</h2>
+				</div>`;
 			}
 
 			list.innerHTML = outputString;
