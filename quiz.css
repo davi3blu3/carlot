@@ -8,12 +8,12 @@ body {
 	margin: 0;
 }
 
-h1 {
-	font-family: 'Yellowtail', cursive;
-	font-size: 2.5em;
-	color: #6FA2A6;
-	border-top: 2px dotted #6FA2A6;
-	border-bottom: 2px dotted #6FA2A6;
+.nav-fullwidth {
+	width: 100%;
+}
+
+.nav-el-margin {
+	margin: 15px;
 }
 
 h2 {
@@ -37,5 +37,6 @@ h3 {
 
 .clicked {
 	border: 6px solid black;
+	padding: 6px;
 	background-color: #bce
 }
